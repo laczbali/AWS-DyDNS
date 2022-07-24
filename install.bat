@@ -7,7 +7,7 @@ set drive_letter=%current_dir:~0,2%
 (
     echo %drive_letter%
     echo cd %current_dir%
-    echo python main.py
+    echo python main.py ^> last_run.txt
 ) > %current_dir%\start.bat
 
 @REM Register scheduled event to launch start.bat (run every 5 minutes, whether the user is logged on or not)
@@ -23,4 +23,5 @@ powershell.exe -ExecutionPolicy ByPass -File register-event.ps1
 del register-event.ps1
 
 @REM Wait for user confirm
+echo Don't forget to create config.json
 pause
