@@ -4,7 +4,7 @@
         {
             "label": "docker-build",
             "type": "shell",
-            "command": "docker build -t blaczk0/aws-dydns:1.0 .",
+            "command": "docker build -f deploy/Dockerfile -t blaczk0/aws-dydns:1.0 .",
             "problemMatcher": []
         }
     ]
