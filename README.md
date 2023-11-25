@@ -15,8 +15,12 @@ Configure an **IAM user**. It should have access to the following, on your hoste
 
 ## Docker Setup
 Create a Docker Compose file, that sets the following env vars:
-- AWS_ACCESS_KEY_ID
-- AWS_SECRET_ACCESS_KEY
-- HOSTED_ZONE_ID
-- RECORD_NAME
-- LOG_LOCATION
+
+| Key name              | Value explanation                                                |
+| --------------------- | ---------------------------------------------------------------- |
+| AWS_ACCESS_KEY_ID     | AWS \ IAM \ Users \ USER \ Security credentials \ Access keys    |
+| AWS_SECRET_ACCESS_KEY | AWS \ IAM \ Users \ USER \ Security credentials \ Access keys    |
+| HOSTED_ZONE_ID        | AWS \ Route 53 \ Hosted zones \ Zone ID field                    |
+| RECORD_NAME           | AWS \ Route 53 \ Hosted zones \ ZONE \ Record name field         |
+| LOG_LOCATION          | Wheres should it create log files (errors and assigment changed) |
+
