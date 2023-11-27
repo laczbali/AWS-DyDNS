@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  ddns:
+    image: "blaczk0/aws-dydns:1.0"
+    environment:
+      AWS_ACCESS_KEY_ID: KEY_ID
+      AWS_SECRET_ACCESS_KEY: KEY_VALUE
+      HOSTED_ZONE_ID: ZONE_ID
+      RECORD_NAME: RECORD.com
+      LOG_LOCATION: /var/log/docker/aws-dydns
+    volumes:
+      - /home/USER/docker/logs:/var/log/docker
